@@ -39,7 +39,7 @@ The simulator is split into independent modules so each piece of the navigation 
 |snc_main.py|Wires the modules together and drive the live animation|
 
 ### Getting Started 
-*Placeholder for code*
+
 ``` bash
 python snc_main.py
 ```
@@ -68,7 +68,7 @@ Navigation drift is an abstract concept and hard to explain to a non-technical a
 4. Complete the survey with the best possible data-quality score before time runs out
 
 ### Getting Started 
-*Placeholder for code*
+
 ``` bash
 python snc_manual.py
 ```
