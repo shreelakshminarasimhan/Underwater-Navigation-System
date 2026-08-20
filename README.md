@@ -73,7 +73,7 @@ Navigation drift is an abstract concept and hard to explain to a non-technical a
 ```bash
 python snc_manual.py
 ```
-For browser game version: https://shreelakshminarasimhan.github.io/Underwater-Navigation-System/
+For browser version: https://shreelakshminarasimhan.github.io/Underwater-Navigation-System/
 
 Once running, use a connected PS4 controller/joystick/keyboard to control the submarine directly. 
 
