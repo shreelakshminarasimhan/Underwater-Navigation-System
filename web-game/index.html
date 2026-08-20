@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNC Simulator — The Oriel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header>
+            <div>
+                <h1>⚓ SNC SIMULATOR</h1>
+                <p>THE ORIEL — UNDERWATER SURVEY MISSION</p>
+            </div>
+
+            <div class="status">
+                <span>TIME <strong id="time">90</strong>s</span>
+                <span>SCORE <strong id="score">0</strong></span>
+                <span>NAV <strong id="quality">HIGH</strong></span>
+            </div>
+        </header>
+
+        <section class="game-panel">
+
+            <canvas id="gameCanvas"></canvas>
+
+        </section>
+
+        <section class="controls">
+
+            <div>
+                <strong>A / ←</strong>
+                <span>TURN LEFT</span>
+            </div>
+
+            <div>
+                <strong>D / →</strong>
+                <span>TURN RIGHT</span>
+            </div>
+
+            <div>
+                <strong>SPACE</strong>
+                <span>DEPLOY BUOY</span>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
