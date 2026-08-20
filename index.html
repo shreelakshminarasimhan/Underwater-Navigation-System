@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNC Simulator — The Oriel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- ── HUD BAR ─────────────────────────────────────────────────── -->
+    <header id="hud">
+      <div class="hud-item" id="hud-title">
+        <span class="oriel">THE ORIEL</span><span class="sub">// SNC SIMULATOR</span>
+      </div>
+      <div class="hud-item" id="hud-time">⏱ 90s</div>
+      <div class="hud-item" id="hud-score">⭐ 0</div>
+      <div class="hud-item" id="hud-buoys">BUOYS ○○○○○</div>
+      <div class="hud-item" id="hud-nodes">NODES 0/14</div>
+      <div class="hud-item" id="hud-quality">NAV QUALITY: —</div>
+      <button id="btn-instructions" title="Toggle instructions (I)">?</button>
+    </header>
+
+    <!-- ── MAIN LAYOUT ─────────────────────────────────────────────── -->
+    <main id="layout">
+
+      <section id="map-panel" class="panel">
+        <canvas id="map-canvas"></canvas>
+        <div id="start-overlay">
+          <h1>SNC SIMULATOR</h1>
+          <p class="tagline">Clarion-Clipperton Zone Survey — The Oriel, 600&nbsp;m depth</p>
+          <p class="brief">
+            INS drifts. GPS doesn't reach you here. Every node you collect
+            is tagged with your <em>estimated</em> position — if the estimate
+            is wrong, the survey map is wrong. You have 5 buoys to reset
+            your fix. Use them wisely.
+          </p>
+          <button id="btn-start">▶ START SURVEY</button>
+          <p class="hint">A/D or ←/→ to steer · SPACE to deploy buoy · gamepad supported</p>
+        </div>
+        <div id="game-over-overlay" class="hidden">
+          <h2>🏁 SURVEY COMPLETE</h2>
+          <p id="go-score">Score: 0</p>
+          <p id="go-breakdown">H=0 M=0 L=0 / 14 nodes</p>
+          <button id="btn-restart">↻ NEW SURVEY (R)</button>
+        </div>
+      </section>
+
+      <aside id="side-panel">
+
+        <div id="depth-panel" class="panel">
+          <div class="panel-label">DEPTH VIEW</div>
+          <canvas id="depth-canvas"></canvas>
+          <div id="depth-caption">Depth 600m</div>
+        </div>
+
+        <div id="param-panel" class="panel">
+          <div class="panel-label">NAV PARAMETERS</div>
+          <table>
+            <tr><td>Position (est)</td><td id="p-pos">+0.0, +0.0 km</td></tr>
+            <tr><td>Speed</td><td id="p-spd">0.00 km/s</td></tr>
+            <tr><td>Heading</td><td id="p-hdg">0°</td></tr>
+            <tr><td>Nav error</td><td id="p-err">0.0 km</td></tr>
+            <tr><td>Quality</td><td id="p-q">—</td></tr>
+            <tr><td>Buoy status</td><td id="p-bst">IDLE</td></tr>
+            <tr><td>Fixes applied</td><td id="p-fix">0 / 5</td></tr>
+          </table>
+        </div>
+
+        <div id="err-panel" class="panel">
+          <div class="panel-label">NAV ERROR OVER TIME</div>
+          <canvas id="err-canvas"></canvas>
+        </div>
+
+      </aside>
+    </main>
+
+    <!-- ── INSTRUCTIONS OVERLAY ────────────────────────────────────── -->
+    <div id="instructions-overlay" class="hidden">
+      <div id="instructions-box">
+        <h2>SURVEY BRIEFING</h2>
+        <p>
+          The Clarion-Clipperton Zone contains an estimated 21 billion tonnes
+          of polymetallic nodules. Mining contractors need centimetre-accurate
+          survey maps. The Oriel surveys at 600&nbsp;m — below GPS range —
+          navigating on INS + DVL, which drifts over time. Every node you
+          collect is tagged with your <strong>estimated</strong> position.
+        </p>
+        <h3>Scoring</h3>
+        <ul>
+          <li><span class="q-high">●</span> error &lt; 2.5&nbsp;km → HIGH quality (×3.0)</li>
+          <li><span class="q-med">●</span> error &lt; 4&nbsp;km → MEDIUM quality (×1.5)</li>
+          <li><span class="q-low">●</span> error ≥ 4&nbsp;km → LOW quality (×0.5)</li>
+        </ul>
+        <p>Node capture uses your <em>estimated</em> position — if you're lost, you miss.</p>
+        <h3>Controls</h3>
+        <table class="controls-table">
+          <tr><td>A / ←</td><td>Turn port</td></tr>
+          <tr><td>D / →</td><td>Turn starboard</td></tr>
+          <tr><td>SPACE</td><td>Deploy buoy (resets your fix)</td></tr>
+          <tr><td>R</td><td>New survey</td></tr>
+          <tr><td>I</td><td>Toggle this panel</td></tr>
+        </table>
+        <p class="controls-note">Gamepad: left stick steers, △ deploys buoy, L1/L2 start a new survey.</p>
+        <p class="controls-note">The Oriel always moves at cruise speed — you only control heading. Stationkeeping is avoided during real survey missions.</p>
+        <button id="btn-close-instructions">Close (I)</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
