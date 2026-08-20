@@ -28,6 +28,14 @@ The simulator is split into independent modules so each piece of the navigation 
 
 ### Getting Started 
 *Placeholder for code*
+```
+git clone
+cd snc-simulator
+pip install matplotliv
+pip install numpy
+
+python snc_main.py
+```
 
 The simulator runs entirely on matplotlib and dumpy 
 
