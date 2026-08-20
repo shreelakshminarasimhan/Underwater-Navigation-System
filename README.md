@@ -1,7 +1,7 @@
 # Underwater-Navigation-System
 
 ### Setup
-```
+``` bash
 git clone <https://github.com/shreelakshminarasimhan/Underwater-Navigation-System.git>
 cd snc-project
 python 3 -m vent .venv
@@ -18,7 +18,7 @@ A real-time Python simulation of the Navigation subsystem (with sensing and comm
 https://github.com/user-attachments/assets/ad896943-7ab8-4b80-9cce-27cd5feb5d1f
 
 ### Why This Exists
-Submarines can't use GPS underwater, so their estimated position slowly drifts away from their true position. XXXXXXX *placeholder for more words*
+Submarines can't use GPS underwater, so their estimated position slowly drifts away from their true position. There are different ways a submarine could navigate underwater but due to the constraints of this particular survey location a buoy is used to correct position error. This simulator makes the position drift and buoy position correction fixes visible and intuitive. 
 
 ### Features:
 * Real-time 3D + top-down visualisation of the submarine's true position, estimated position, and accumulated drift, rendered live as the mission runs
@@ -40,7 +40,7 @@ The simulator is split into independent modules so each piece of the navigation 
 
 ### Getting Started 
 *Placeholder for code*
-```
+``` bash
 python snc_main.py
 ```
 
@@ -69,7 +69,7 @@ Navigation drift is an abstract concept and hard to explain to a non-technical a
 
 ### Getting Started 
 *Placeholder for code*
-```
+``` bash
 python snc_manual.py
 ```
 
