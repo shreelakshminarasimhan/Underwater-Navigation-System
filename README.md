@@ -6,7 +6,7 @@ A real-time Python simulation of the Navigation subsystem (with sensing and comm
 https://github.com/user-attachments/assets/ad896943-7ab8-4b80-9cce-27cd5feb5d1f
 
 ### Why This Exists
-Submarines can't use GPS underwater, so their estimated position slowly drifts away from their true position. XXXXXXX
+Submarines can't use GPS underwater, so their estimated position slowly drifts away from their true position. XXXXXXX *placeholder for more words*
 
 ### Features:
 * Real-time 3D + top-down visualisation of the submarine's true position, estimated position, and accumulated drift, rendered live as the mission runs
@@ -27,12 +27,33 @@ The simulator is split into independent modules so each piece of the navigation 
 |snc_main.py|Wires the modules together and drive the live animation|
 
 ### Getting Started 
-git clone <this-repo>
-cd snc-simulator
-pip install matplotlib numpy
+*Placeholder for code*
 
-python snc_main.py         # core navigation + buoy simulation
-python snc_main_usbl.py    # extended version with USBL UUV tracking
+The simulator runs entirely on matplotlib and dumpy 
 
+## Deep Sea Survey _ Interactive Game 
+An interactive arcade-style game that turns a real submarine navigation-error model into a playable risk-reward mechanic. Built for a live design exhibition, players pilot a submarine on a survey mission and decide when to "spend" a limited number of GPS buoy fixes to correct the navigation drift: balancing survey speed against data quality, exactly as a real mission planner would.
 
+*PHOTO PLACEHOLDER*
+
+### Why it exists
+Navigation drift is an abstract concept and hard to explain to a non-technical audience in a few seconds at an exhibition stand. This game makes it tangible: every second you delay a GPS fix, your submarine's estimated position gets less accurate, and your survey data quality quietly degrades. However GPS fixes cost money and time and so you have to be strategic about when to deploy them (using control systems). Built as a companion piece to a full submarine SNC subsystem simulator, it was demoed live to academic and industry visitors. 
+
+### Features
+* Gamepad Support: PS4 controller inout via pyjama, blended with keyboard controls (if controller unavailble)
+* Live scoring system tied to the real navigation-drift model — the longer you go without a GPS fix, the lower your data-quality tier (High/ Medium/ Low)
+
+### How to play
+1. Steer your submarine around the survey area using the keyboard or gamepad
+2. Watch the navigation error grow the longer you go between GPS fixes
+3. Deploy a buoy fix (limited number available) to reset your error. But each fix costs time
+4. Complete the survey with the best possible data-quality score before time runs out
+
+### Getting Started 
+*Placeholder for code*
+
+Once running, use a connected PS4 controller/ joystick/ keyboard to control the submarine directly. 
+
+### Author 
+Shree Lakshminarasimhan - Built as a part of a group submarine design project 
 
