@@ -26,5 +26,8 @@ The simulator is split into independent modules so each piece of the navigation 
 |buoy_logic.py|GPS buoy deployment state machine and drift-reset logic|
 |snc_main.py|Wires the modules together and drive the live animation|
 
+### Getting Started 
+git clone
+
 
 
