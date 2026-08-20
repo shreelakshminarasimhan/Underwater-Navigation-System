@@ -2,7 +2,7 @@
 
 ### Setup
 ```
-git clone <>
+git clone <https://github.com/shreelakshminarasimhan/Underwater-Navigation-System.git>
 cd snc-project
 python 3 -m vent .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
