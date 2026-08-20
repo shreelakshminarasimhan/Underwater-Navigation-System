@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #080b12;
+    color: #d8dcea;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    width: min(1400px, 96vw);
+    margin: 20px auto;
+}
+
+/* ─────────────────────────────
+   HEADER
+───────────────────────────── */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 22px;
+
+    background: #111725;
+
+    border: 1px solid #1a6699;
+    border-bottom: none;
+
+    border-radius: 12px 12px 0 0;
+}
+
+h1 {
+    margin: 0;
+
+    color: #3498db;
+
+    font-size: clamp(18px, 2vw, 28px);
+    letter-spacing: 3px;
+}
+
+header p {
+    margin: 6px 0 0;
+
+    color: #6677aa;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.status {
+    display: flex;
+    gap: 25px;
+
+    font-size: 12px;
+
+    color: #6677aa;
+}
+
+.status strong {
+    display: inline-block;
+
+    margin-left: 5px;
+
+    color: #f39c12;
+
+    font-size: 18px;
+}
+
+/* ─────────────────────────────
+   GAME AREA
+───────────────────────────── */
+
+.game-panel {
+    position: relative;
+
+    width: 100%;
+
+    background: #050912;
+
+    border-left: 1px solid #1a6699;
+    border-right: 1px solid #1a6699;
+}
+
+canvas {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    background: #050912;
+}
+
+/* ─────────────────────────────
+   CONTROLS
+───────────────────────────── */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    padding: 18px;
+
+    background: #111725;
+
+    border: 1px solid #1a6699;
+    border-top: none;
+
+    border-radius: 0 0 12px 12px;
+}
+
+.controls div {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.controls strong {
+    color: #d8dcea;
+}
+
+.controls span {
+    color: #6677aa;
+
+    font-size: 10px;
+}
+
+/* ─────────────────────────────
+   MOBILE
+───────────────────────────── */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .status {
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 5px;
+    }
+
+    .controls {
+        gap: 20px;
+    }
+
+}
