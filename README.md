@@ -34,7 +34,10 @@ The simulator runs entirely on matplotlib and dumpy
 ## Deep Sea Survey _ Interactive Game 
 An interactive arcade-style game that turns a real submarine navigation-error model into a playable risk-reward mechanic. Built for a live design exhibition, players pilot a submarine on a survey mission and decide when to "spend" a limited number of GPS buoy fixes to correct the navigation drift: balancing survey speed against data quality, exactly as a real mission planner would.
 
-*PHOTO PLACEHOLDER*
+
+
+https://github.com/user-attachments/assets/d1413ff5-f918-47b7-8e30-737df8276258
+
 
 ### Why it exists
 Navigation drift is an abstract concept and hard to explain to a non-technical audience in a few seconds at an exhibition stand. This game makes it tangible: every second you delay a GPS fix, your submarine's estimated position gets less accurate, and your survey data quality quietly degrades. However GPS fixes cost money and time and so you have to be strategic about when to deploy them (using control systems). Built as a companion piece to a full submarine SNC subsystem simulator, it was demoed live to academic and industry visitors. 
