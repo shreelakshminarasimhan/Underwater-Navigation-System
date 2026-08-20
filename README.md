@@ -27,7 +27,14 @@ The simulator is split into independent modules so each piece of the navigation 
 |snc_main.py|Wires the modules together and drive the live animation|
 
 ### Getting Started 
+'''
 git clone
+cd snc-simulator
+pip install matplotlib
+pip install numpy
+
+python snc_main.py
+'''
 
 
 
