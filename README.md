@@ -1,5 +1,17 @@
 # Underwater-Navigation-System
 
+### Setup
+```
+git clone <>
+cd snc-project
+python 3 -m vent .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+
+pip install matplotlib
+pip install numpy
+pip install flask
+pip install pygame
+```
 ## SNC Navigation Simulator
 A real-time Python simulation of the Navigation subsystem (with sensing and communication elements) designed for a deep-sea research submarine operating in the Clarion Clipperton Zone (CCZ). It visualises how Inertial Navigation System (JNS), Doppler Velocity Log, and Acoustic Doppler Velocity Profiler (ADCP) navigation error accumulates over a multi-day survey mission, and how a GPS body corrects that drift.
 
@@ -29,11 +41,6 @@ The simulator is split into independent modules so each piece of the navigation 
 ### Getting Started 
 *Placeholder for code*
 ```
-git clone
-cd snc-simulator
-pip install matplotlib
-pip install numpy
-
 python snc_main.py
 ```
 
@@ -63,10 +70,6 @@ Navigation drift is an abstract concept and hard to explain to a non-technical a
 ### Getting Started 
 *Placeholder for code*
 ```
-git clone
-cd deep-sea-survey
-pip install flask pygame
-
 python snc_manual.py
 ```
 
