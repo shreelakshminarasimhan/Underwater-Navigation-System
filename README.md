@@ -31,7 +31,7 @@ The simulator is split into independent modules so each piece of the navigation 
 ```
 git clone
 cd snc-simulator
-pip install matplotliv
+pip install matplotlib
 pip install numpy
 
 python snc_main.py
@@ -62,6 +62,13 @@ Navigation drift is an abstract concept and hard to explain to a non-technical a
 
 ### Getting Started 
 *Placeholder for code*
+```
+git clone
+cd deep-sea-survey
+pip install flask pygame
+
+python snc_manual.py
+```
 
 Once running, use a connected PS4 controller/ joystick/ keyboard to control the submarine directly. 
 
