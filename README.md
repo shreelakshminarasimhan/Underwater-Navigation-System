@@ -27,14 +27,12 @@ The simulator is split into independent modules so each piece of the navigation 
 |snc_main.py|Wires the modules together and drive the live animation|
 
 ### Getting Started 
-'''
-git clone
+git clone <this-repo>
 cd snc-simulator
-pip install matplotlib
-pip install numpy
+pip install matplotlib numpy
 
-python snc_main.py
-'''
+python snc_main.py         # core navigation + buoy simulation
+python snc_main_usbl.py    # extended version with USBL UUV tracking
 
 
 
